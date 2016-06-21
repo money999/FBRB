@@ -22,18 +22,54 @@
 % par.preN = 4;
 % par.access = [0,1;0,1;0,1;0,1]';
 % actmatrixx = activeRule(rule, par, indata);
-load('NtrainFeature.mat')
-load('NtestFeature.mat')
-fname = {'D1','D11','D20','D26','D46','D47','D48','D49','D95','D96','D101','D102'};
-xin = [];
-for i = 1:length(fname)
-    xin = [xin; NtrainFeature.(fname{i}); NtestFeature.(fname{i})];
-end
-mi = min(xin);
-ma = max(xin);
+% load('NtrainFeature.mat')
+% load('NtestFeature.mat')
+% fname = {'D1','D11','D20','D26','D46','D47','D48','D49','D95','D96','D101','D102'};
+% xin = [];
+% for i = 1:length(fname)
+%     xin = [xin; NtrainFeature.(fname{i}); NtestFeature.(fname{i})];
+% end
+% mi = min(xin);
+% ma = max(xin);
+% 
+% 
+% [644574,508890,201299,298141,106766,103950]
+% [-604463,-254497,-229618,-140337,-170549,-108346]
 
 
-[644574,508890,201299,298141,106766,103950]
-[-604463,-254497,-229618,-140337,-170549,-108346]
 
+
+% [rule, par] =  initRuleGivenData();
+% x0 = ratt2x(rule, par);
+% ruleNew= x2ratt( x0, par );
+% [ A, b, Aeq, beq, lb, ub ] = genConstraint( x0, par );
+% 
+% 
+% 
+% indata = [5 2.1 5 2];
+% [B, BA] = activeRule(rule, par, indata);
+% alln = 10;
+% strr = ['sheet' num2str(alln)];
+% 
+% xlswrite('c:\save.xls',Aeq,strr);
+% 
+% xlswrite('c:\save.xls',beq,'sheet5');
+
+
+% trainiris = [NUM(1:25,:); NUM(51:75,:); NUM(101:125,:)];
+% testiris = [NUM(26:50,:); NUM(76:100,:); NUM(126:150,:)];
+
+% max([testglass;trainglass])
+% min([testglass;trainglass])
+
+% trainglass= [];
+% testglass= [];
+% 
+% for i = 1:7
+%     aa = num(num(:,10) == i,:);
+%     row = size(aa,1);
+%     prerow = round(row/2);
+%     trainglass = [trainglass;aa(1:prerow,:)];
+%     testglass = [testglass;aa(prerow+1:row,:)];
+% end
 

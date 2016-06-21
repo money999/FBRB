@@ -1,9 +1,10 @@
 clear
-load('trainiris.mat')
-load('testiris.mat')
+load('data\trainiris.mat')
+load('data\testiris.mat')
 
 traindata = trainiris;
 testdata = testiris;
+
 
 [rule, par] =  initRuleGivenData();
 x0 = ratt2x(rule, par);
